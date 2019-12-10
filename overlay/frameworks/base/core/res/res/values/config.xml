@@ -347,4 +347,7 @@
     <string name="config_batteryProtectionSuspendValue" translatable="false">1</string>
     <string name="config_batteryProtectionResumeValue" translatable="false">0</string>
 
+    <!-- The app which will handle routine based automatic battery saver, if empty the UI for
+         routine based battery saver will be hidden -->
+    <string name="config_batterySaverScheduleProvider">com.google.android.apps.turbo</string>
 </resources>
