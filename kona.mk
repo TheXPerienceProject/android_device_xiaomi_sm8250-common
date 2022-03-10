@@ -591,7 +591,6 @@ TARGET_BOARD_PLATFORM := kona
 TARGET_PROVIDES_POWERHAL := true
 TARGET_COMMON_QTI_COMPONENTS += \
     perf \
-    telephony \
     wfd
 
 # Inherit the proprietary files
