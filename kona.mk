@@ -590,6 +590,7 @@ PRODUCT_BOOT_JARS += \
 TARGET_BOARD_PLATFORM := kona
 TARGET_PROVIDES_POWERHAL := true
 TARGET_COMMON_QTI_COMPONENTS += \
+    perf \
     wfd
 
 # Inherit the proprietary files
