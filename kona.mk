@@ -563,9 +563,6 @@ PRODUCT_PACKAGES += \
     libnl \
     libwfdaac_vendor
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
-
 TARGET_BOARD_PLATFORM := kona
 TARGET_PROVIDES_POWERHAL := true
 TARGET_COMMON_QTI_COMPONENTS += \
