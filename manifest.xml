@@ -305,4 +305,13 @@
         <transport>hwbinder</transport>
         <fqname>@1.0::ITouchFeature/default</fqname>
     </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.perf</name>
+        <transport>hwbinder</transport>
+        <version>2.2</version>
+        <interface>
+            <name>IPerf</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
 </manifest>
