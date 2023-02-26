@@ -434,11 +434,8 @@ PRODUCT_PACKAGES += \
     libtflite \
     vendor.qti.hardware.servicetracker@1.2.vendor
 
-# Perf Boot Jars
-PRODUCT_BOOT_JARS += \
-    QPerformance \
-    QXPerformance \
-    UxPerformance
+# Platform
+TARGET_BOARD_PLATFORM := kona
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
@@ -459,6 +456,11 @@ PRODUCT_PACKAGES += \
     libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor
+
+# QTI
+TARGET_COMMON_QTI_COMPONENTS := perf
+TARGET_KERNEL_VERSION := 4.19
+TARGET_PROVIDES_XIAOMI_POWERHAL := true
 
 # RIL
 PRODUCT_PACKAGES += \
@@ -519,9 +521,13 @@ PRODUCT_PACKAGES += \
     qti_telephony_utils.xml \
     telephony-ext
 
-PRODUCT_BOOT_JARS += \
-    telephony-ext
+# Thermal
+ifeq ($(TARGET_USE_QTI_THERMAL_SERVICE),true)
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0-service.qti
+endif
 
+ifeq ($(TARGET_USE_HIGH_TOUCH_POLLING_RATE),true)
 # Touch
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.xiaomi
