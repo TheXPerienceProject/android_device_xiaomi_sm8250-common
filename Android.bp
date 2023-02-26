@@ -13,3 +13,11 @@ soong_namespace {
         "vendor/qcom/opensource/usb/etc",
     ],
 }
+
+
+cc_library_shared {
+    name: "libpiex_shim",
+    shared_libs: ["piex"],
+    srcs: ["piex/piex_shim.cpp"],
+    vendor: true,
+}
