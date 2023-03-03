@@ -341,9 +341,15 @@
          from DOZE to ON, in millis. -->
     <integer name="config_wakeUpDelayDoze">32</integer>
 
-    <!-- QTI Boost Framework - AOSP Version -->
-    <bool name="config_supportsBoostFramework">true</bool>
-
     <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
     <string name="config_oemFastChargerStatusPath" translatable="false">/sys/class/power_supply/bms/fastcharge_mode</string>
+
+    <!-- Smart charging -> now Battery protection-->
+    <bool name="config_batteryProtectionAvailable">true</bool>
+    <integer name="config_batteryProtectionBatteryLevel">80</integer>
+    <integer name="config_batteryProtectionBatteryResumeLevel">60</integer>
+    <string name="config_batteryProtectionSysfsNode" translatable="false">/sys/class/qcom-battery/input_suspend</string>
+    <string name="config_batteryProtectionSuspendValue" translatable="false">1</string>
+    <string name="config_batteryProtectionResumeValue" translatable="false">0</string>
+
 </resources>
