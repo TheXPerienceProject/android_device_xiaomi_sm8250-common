@@ -17,7 +17,7 @@ soong_namespace {
 
 cc_library_shared {
     name: "libpiex_shim",
-    shared_libs: ["piex"],
+    shared_libs: ["libpiex"],
     srcs: ["piex/piex_shim.cpp"],
     vendor: true,
 }
