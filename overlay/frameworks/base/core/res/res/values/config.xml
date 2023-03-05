@@ -358,4 +358,7 @@
 
     <!-- Fingerprint from stock ROM -->
     <string name="config_stockFingerprint" translatable="false">Redmi/alioth_global/alioth:12/RKQ1.211001.001/V13.0.7.0.SKHMIXM:user/release-keys</string>
+
+    <!-- StatusBar burn-in protection -->
+    <bool name="config_statusBarBurnInProtection"true</bool>
 </resources>
