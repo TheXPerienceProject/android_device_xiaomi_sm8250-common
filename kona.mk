@@ -203,7 +203,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     XiaomiParts
 
-ifeq ($(TARGET_USES_MIUI_DOLBY),true)
 # Miui Dolby Engine Topic
 # Dolby Sepolicy
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/dolby
@@ -220,9 +219,9 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/dolby/permissions,$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions)
 
 # MiSound with Dolby Environment (By Default - Disabled)
-PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.audio.misound.disable=true \
-    ro.vendor.audio.misound.bluetooth.enable=true
+#PRODUCT_VENDOR_PROPERTIES += \
+#    persist.vendor.audio.misound.disable=true \
+#    ro.vendor.audio.misound.bluetooth.enable=true
 
 # Dolby MediaCodecs Loading Support (Overwrites Vendor files)
 PRODUCT_COPY_FILES += \
@@ -230,16 +229,16 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/dolby/media/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml
 
 # Remove Packages for Dolby Support
-PRODUCT_PACKAGES += \
-    RemovePackagesDolby
+#PRODUCT_PACKAGES += \
+#    RemovePackagesDolby
 
-else
+#else
 # MiSound (Dirac Only)
 # MiSound without Dolby (By Default - Enabled)
-PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.audio.misound.disable=false \
-    ro.vendor.audio.misound.bluetooth.enable=true
-endif
+#PRODUCT_VENDOR_PROPERTIES += \
+#    persist.vendor.audio.misound.disable=false \
+#    ro.vendor.audio.misound.bluetooth.enable=true
+#endif
 
 
 # Display
@@ -536,7 +535,7 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti
 endif
 
-ifeq ($(TARGET_USE_HIGH_TOUCH_POLLING_RATE),true)
+#ifeq ($(TARGET_USE_HIGH_TOUCH_POLLING_RATE),true)
 # Touch
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.xiaomi
