@@ -233,8 +233,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/dolby/media/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml
 
 # Remove Packages for Dolby Support
-#PRODUCT_PACKAGES += \
-#    RemovePackagesDolby
+PRODUCT_PACKAGES += \
+    RemovePackagesDolby
 
 #else
 # MiSound (Dirac Only)
@@ -553,7 +553,7 @@ PRODUCT_PACKAGES += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.xiaomi
+    vendor.xperience.touch@1.0-service.xiaomi
 
 # USB
 PRODUCT_PACKAGES += \
