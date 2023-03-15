@@ -34,7 +34,6 @@ import androidx.preference.PreferenceManager;
 import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.doze.DozeUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
-import org.lineageos.settings.refreshrate.RefreshUtils;
 import org.lineageos.settings.utils.FileUtils;
 
 import vendor.xiaomi.hardware.touchfeature.V1_0.ITouchFeature;
@@ -75,7 +74,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         }
         DozeUtils.checkDozeService(context);
         ThermalUtils.startService(context);
-        RefreshUtils.startService(context);
         FileUtils.enableService(context);
 
         // Override HDR types
