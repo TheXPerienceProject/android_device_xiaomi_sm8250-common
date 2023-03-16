@@ -34,3 +34,6 @@ allow vendor_hal_citsensorservice_xiaomi_default vendor_audio_data_file:file {io
 
 # Allow to use wakelock
 wakelock_use(vendor_hal_citsensorservice_xiaomi_default)
+
+allow vendor_hal_citsensorservice_xiaomi_default mnt_vendor_file:dir search;
+allow vendor_hal_citsensorservice_xiaomi_default vendor_diag_device:chr_file { read write };
