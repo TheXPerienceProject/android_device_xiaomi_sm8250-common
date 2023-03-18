@@ -1,1 +1,1 @@
-allow vendor_init-qcom-sensors-sh vendor_data_file:dir read;
+allow vendor_init-qcom-sensors-sh vendor_data_file:dir r_file_perms;
