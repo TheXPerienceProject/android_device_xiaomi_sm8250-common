@@ -138,7 +138,6 @@ ro.vendor.bluetooth.wipower=false
 vendor.qcom.bluetooth.soc=hastings
 
 # Chipset
-ro.soc.manufacturer=Qualcomm
 ro.soc.model=SM8250
 
 # Crypto
@@ -232,9 +231,6 @@ ro.camera.notify_nfc=1
 
 # OTG
 persist.sys.oem.otg_support=true
-
-# PASR
-vendor.power.pasr.enabled=false
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so

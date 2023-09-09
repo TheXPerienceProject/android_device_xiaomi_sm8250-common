@@ -363,7 +363,19 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Perf
 PRODUCT_PACKAGES += \
-    libqti-perfd-client
+    android.hardware.thermal@2.0 \
+    vendor.qti.hardware.perf@2.2 \
+    vendor.qti.hardware.perf@2.2.vendor \
+    vendor.qti.hardware.perf@2.3 \
+    libpsi.vendor \
+    libtflite \
+    vendor.qti.hardware.servicetracker@1.2.vendor
+
+# Platform
+TARGET_BOARD_PLATFORM := kona
+TARGET_COMMON_QTI_COMPONENTS := perf
+TARGET_KERNEL_VERSION := 4.19
+TARGET_PROVIDES_XIAOMI_POWERHAL := true
 
 # Power
 PRODUCT_PACKAGES += \
@@ -447,9 +459,6 @@ PRODUCT_PACKAGES += \
     qti_telephony_hidl_wrapper.xml \
     qti-telephony-utils \
     qti_telephony_utils.xml \
-    telephony-ext
-
-PRODUCT_BOOT_JARS += \
     telephony-ext
 
 # Thermal
