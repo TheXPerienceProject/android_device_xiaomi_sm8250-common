@@ -31,6 +31,7 @@ vendor/lib/libsurround_3mic_proc.so
 # Audio FX modules
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libshoebox.so
+vendor/lib/soundfx/libmisoundfx.so|437064b853119b47356d16dbd927b2f1547aa11d
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
